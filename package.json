@@ -1,0 +1,24 @@
+{
+  "name": "langchain-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run build && node dist/index.js",
+    "build": "tsgo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.11.1",
+  "devDependencies": {
+    "@types/dotenv": "^8.2.3",
+    "@typescript/native-preview": "7.0.0-dev.20250805.1"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.66",
+    "@langchain/deepseek": "^0.1.0",
+    "dotenv": "^17.2.1"
+  }
+}
