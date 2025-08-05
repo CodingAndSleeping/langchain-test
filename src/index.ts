@@ -1,5 +1,6 @@
 import dotenv from 'dotenv'
 import { ChatDeepSeek } from '@langchain/deepseek'
+import { HumanMessage } from '@langchain/core/messages'
 const env = dotenv.config().parsed
 
 const process = {
@@ -11,7 +12,8 @@ const model = new ChatDeepSeek({
   apiKey: process.env.API_KEY,
 })
 
-console.log(model)
+const message = new HumanMessage('你好')
+console.log(message)
 
-const a = await model.invoke('nihao')
-console.log(a)
+const res = await model.invoke([message])
+console.log(res)
